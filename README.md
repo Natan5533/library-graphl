@@ -6,7 +6,28 @@ To start your Phoenix server:
   * Create and migrate your database with `mix ecto.setup`
   * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
 
-Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+Now you can visit [`localhost:4001`](http://localhost:4001) from your browser.
+
+## Examples 
+# Mutation
+`mutation {
+  createLibrary(
+    name: "Library name",
+    address: "Paulista Avenue",
+  ) {
+    name
+    address
+  }
+}`
+
+# Query 
+`{
+  allLibraries {
+    name
+    address
+  }
+}`
+
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
